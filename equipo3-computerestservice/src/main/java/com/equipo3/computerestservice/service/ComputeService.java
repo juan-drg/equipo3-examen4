@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.equipo3.computerestservice.model.Cotizacion;
 import com.equipo3.computerestservice.model.Servicio;
+import com.equipo3.computerestservice.response.CotizacionRequest;
 
 @Service
 public class ComputeService {
