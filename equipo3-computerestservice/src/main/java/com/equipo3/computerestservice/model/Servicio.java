@@ -4,7 +4,7 @@ public class Servicio implements java.io.Serializable {
 
 	private int idservicio;
 	private String nombre;
-	private String costo;
+	private Double costo;
 
 	public Servicio() {
 	}
@@ -13,7 +13,7 @@ public class Servicio implements java.io.Serializable {
 		this.idservicio = idservicio;
 	}
 
-	public Servicio(int idservicio, String nombre, String costo) {
+	public Servicio(int idservicio, String nombre, Double costo) {
 		this.idservicio = idservicio;
 		this.nombre = nombre;
 		this.costo = costo;
@@ -35,11 +35,11 @@ public class Servicio implements java.io.Serializable {
 		this.nombre = nombre;
 	}
 
-	public String getCosto() {
+	public Double getCosto() {
 		return this.costo;
 	}
 
-	public void setCosto(String costo) {
+	public void setCosto(Double costo) {
 		this.costo = costo;
 	}
 

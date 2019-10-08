@@ -11,6 +11,7 @@ public class CotizacionResponse {
 	private Cliente cliente;
 	private List<Servicio> servicios = new ArrayList<>();
 	private Cotizacion cotizacion;
+	private String message;
 	
 	public CotizacionResponse() {
 		super();
@@ -38,5 +39,14 @@ public class CotizacionResponse {
 
 	public void setCotizacion(Cotizacion cotizacion) {
 		this.cotizacion = cotizacion;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
 	}	
+	
 }
