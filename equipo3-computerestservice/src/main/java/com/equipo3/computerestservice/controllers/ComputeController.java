@@ -24,20 +24,21 @@ public class ComputeController {
 	
 	@PostMapping("/cotizacion")
 	public CotizacionResponse cotizacion(CotizacionRequest cotizacion) {
-		CotizacionResponse cotizacionresponse =new CotizacionResponse(); 
-	 cotizacionresponse.setCliente(cotizacion.getCliente());
-	 cotizacionresponse.setServicios(cotizacion.getServicios());
+	CotizacionResponse cotizacionresponse =new CotizacionResponse(); 
+	cotizacionresponse.setCliente(cotizacion.getCliente());
+	cotizacionresponse.setServicios(cotizacion.getServicios());
 	 
-	cotizacionresponse.getCotizacion().setSubtotal(service.calcularSubtotal(cotizacion));
-	cotizacionresponse.getCotizacion().setSubtotal(service.calcularDescuento(cotizacion));
+	cotizacionresponse.getCotizacion().setSubtotal(service.calcularSubtotal(cotizacionresponse).getSubtotal());
+	cotizacionresponse.getCotizacion().setDescuento(service.calcularDescuento(cotizacionresponse).getDescuento());
+	cotizacionresponse.getCotizacion().setSubtotalcondescuento(cotizacionresponse.getCotizacion().getSubtotal()-cotizacionresponse.getCotizacion().getDescuento());
+    
+	cotizacionresponse.getCotizacion().setIva(service.calcularIVA(cotizacionresponse).getIva());
+	cotizacionresponse.getCotizacion().setTotal(service.calcularTotal(cotizacionresponse).getTotal());
+	
+	return cotizacionresponse;
 	} 
-	
-	
-	
-	
-	Cliente cliente =new Cliente();
-	Servicio servicio=new Servicio();
-	
+
+    
 	
 
 
