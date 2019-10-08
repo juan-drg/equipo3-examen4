@@ -8,8 +8,5 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 public class Equipo3ComputerestserviceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(Equipo3ComputerestserviceApplication.class, args);
-	}
 
 }
