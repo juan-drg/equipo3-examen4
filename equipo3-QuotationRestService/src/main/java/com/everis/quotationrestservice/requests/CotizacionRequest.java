@@ -1,5 +1,6 @@
 package com.everis.quotationrestservice.requests;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.everis.quotationrestservice.model.Cliente;
@@ -7,7 +8,7 @@ import com.everis.quotationrestservice.model.Servicio;
 
 public class CotizacionRequest {
 	private Cliente cliente;
-	private List<Servicio> servicios;
+	private List<Servicio> servicios = new ArrayList<>();
 
 	public Cliente getCliente() {
 		return cliente;
