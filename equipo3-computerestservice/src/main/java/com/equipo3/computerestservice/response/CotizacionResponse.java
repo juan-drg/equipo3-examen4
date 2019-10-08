@@ -12,6 +12,7 @@ public class CotizacionResponse {
 	private List<Servicio> servicios = new ArrayList<>();
 	private Cotizacion cotizacion;
 	private String message;
+	private boolean status;
 	
 	public CotizacionResponse() {
 		super();
@@ -47,6 +48,16 @@ public class CotizacionResponse {
 
 	public void setMessage(String message) {
 		this.message = message;
-	}	
+	}
+
+	public boolean isStatus() {
+		return status;
+	}
+
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+
+	
 	
 }

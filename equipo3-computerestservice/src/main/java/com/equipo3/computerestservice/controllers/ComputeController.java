@@ -37,6 +37,7 @@ public class ComputeController {
 	cotizacionresponse.getCotizacion().setIva(service.calcularIVA(cotizacionresponse).getIva());
 	cotizacionresponse.getCotizacion().setTotal(service.calcularTotal(cotizacionresponse).getTotal());
 	
+	cotizacionresponse.setStatus(true);
 	return cotizacionresponse;
 	} 
 
