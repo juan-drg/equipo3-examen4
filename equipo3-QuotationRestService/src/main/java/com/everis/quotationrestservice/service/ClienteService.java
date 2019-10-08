@@ -18,4 +18,11 @@ public class ClienteService {
 	
 		return clienteRepository.findAll();
 	}
+
+	public Cliente bucarByid(int idcliente) {
+		
+		return clienteRepository.findById(idcliente).get();
+	}
+	
+	
 }

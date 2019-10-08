@@ -14,13 +14,13 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema examen4
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `examen4` DEFAULT CHARACTER SET utf8 ;
-USE `examen4` ;
+CREATE SCHEMA IF NOT EXISTS `examenequipotres` DEFAULT CHARACTER SET utf8 ;
+USE `examenequipotres` ;
 
 -- -----------------------------------------------------
 -- Table `examen4`.`cliente`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `examen4`.`cliente` (
+CREATE TABLE IF NOT EXISTS `examenequipotres`.`cliente` (
   `idcliente` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NULL,
   `apaterno` VARCHAR(45) NULL,
@@ -33,10 +33,10 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `examen4`.`servicio`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `examen4`.`servicio` (
+CREATE TABLE IF NOT EXISTS `examenequipotres`.`servicio` (
   `idservicio` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NULL,
-  `costo` VARCHAR(45) NULL,
+  `costo` double  NULL,
   PRIMARY KEY (`idservicio`))
 ENGINE = InnoDB;
 
