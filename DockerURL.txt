@@ -1,0 +1,8 @@
+Nombres de las imágenes de docker en docker hub.
+
+Eureka: https://cloud.docker.com/repository/docker/ivgos/eurekaexamen4
+		docker run -p 8761:8761 --name #name -d ivgos/eurekaexamen4
+Quotation: https://cloud.docker.com/repository/docker/ivgos/quotation/general
+		docker run -p 8200:8200 -d --name some_name ivgos/quotation
+Computer: https://cloud.docker.com/repository/docker/ivgos/computer
+		docker run -p 9090:9090 -d --name some_name ivgos/computer
