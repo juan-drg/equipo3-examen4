@@ -7,6 +7,7 @@ public class Cotizacion {
 	private Double subtotalcondescuento;
 	private Double iva;
 	private Double total;
+	
 	public Double getSubtotal() {
 		return subtotal;
 	}

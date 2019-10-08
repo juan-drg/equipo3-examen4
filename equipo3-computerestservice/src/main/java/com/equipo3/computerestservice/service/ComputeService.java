@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 import com.equipo3.computerestservice.model.Cotizacion;
 import com.equipo3.computerestservice.model.Servicio;
-import com.equipo3.computerestservice.response.CotizacionResponse;
 
 @Service
 public class ComputeService {
@@ -37,6 +36,20 @@ public class ComputeService {
 		}else {
 			cotizacion =null;
 		}
+		return cotizacion;
+	}
+	
+	public Cotizacion calcularIVA(CotizacionRequest response) {
+		Cotizacion cotizacion = new Cotizacion();
+		cotizacion.setIva(response.getCotizacion().getSubtotalcondescuento()*.16);
+		
+		return cotizacion;
+	}
+	
+	public Cotizacion calcularTotal(CotizacionRequest response) {
+		Cotizacion cotizacion = new Cotizacion();
+		cotizacion.setTotal(response.getCotizacion().getSubtotalcondescuento()
+				+response.getCotizacion().getIva());
 		return cotizacion;
 	}
 }
