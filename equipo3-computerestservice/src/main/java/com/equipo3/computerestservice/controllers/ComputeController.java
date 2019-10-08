@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.equipo3.computerestservice.model.Cliente;
+import com.equipo3.computerestservice.model.Cotizacion;
 import com.equipo3.computerestservice.model.Servicio;
 import com.equipo3.computerestservice.response.CotizacionRequest;
 import com.equipo3.computerestservice.response.CotizacionResponse;
@@ -24,11 +25,12 @@ public class ComputeController {
 	private ComputeService service;
 	
 	@PostMapping("/cotizacion")
-	
 	public CotizacionResponse cotizacion(@RequestBody CotizacionRequest cotizacion) {
 	CotizacionResponse cotizacionresponse =new CotizacionResponse(); 
 	cotizacionresponse.setCliente(cotizacion.getCliente());
 	cotizacionresponse.setServicios(cotizacion.getServicios());
+	cotizacionresponse.setCotizacion(new Cotizacion());
+	
 	 
 	cotizacionresponse.getCotizacion().setSubtotal(service.calcularSubtotal(cotizacionresponse).getSubtotal());
 	cotizacionresponse.getCotizacion().setDescuento(service.calcularDescuento(cotizacionresponse).getDescuento());

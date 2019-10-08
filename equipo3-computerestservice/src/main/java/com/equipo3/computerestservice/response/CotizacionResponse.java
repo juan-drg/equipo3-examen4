@@ -10,14 +10,15 @@ import com.equipo3.computerestservice.model.Servicio;
 public class CotizacionResponse {
 	private Cliente cliente;
 	private List<Servicio> servicios = new ArrayList<>();
-	private Cotizacion cotizacion;
+	private Cotizacion cotizacion ;
 	private String message;
 	private boolean status;
 	
 	public CotizacionResponse() {
 		super();
 	}
-
+	
+	
 	public Cliente getCliente() {
 		return cliente;
 	}
