@@ -47,5 +47,9 @@ public class Cotizacion {
 		this.total = total;
 	}
 	
+	public Cotizacion() {
+		super();
+	}
+	
 	
 }

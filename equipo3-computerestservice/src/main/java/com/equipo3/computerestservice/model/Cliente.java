@@ -2,6 +2,10 @@ package com.equipo3.computerestservice.model;
 
 public class Cliente implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int idcliente;
 	private String nombre;
 	private String apaterno;
