@@ -2,6 +2,7 @@ package com.equipo3.computerestservice.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,7 +24,8 @@ public class ComputeController {
 	private ComputeService service;
 	
 	@PostMapping("/cotizacion")
-	public CotizacionResponse cotizacion(CotizacionRequest cotizacion) {
+	
+	public CotizacionResponse cotizacion(@RequestBody CotizacionRequest cotizacion) {
 	CotizacionResponse cotizacionresponse =new CotizacionResponse(); 
 	cotizacionresponse.setCliente(cotizacion.getCliente());
 	cotizacionresponse.setServicios(cotizacion.getServicios());
