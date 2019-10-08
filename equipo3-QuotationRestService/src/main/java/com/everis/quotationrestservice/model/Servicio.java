@@ -18,7 +18,7 @@ public class Servicio implements java.io.Serializable {
 
 	private int idservicio;
 	private String nombre;
-	private String costo;
+	private double costo;
 
 	public Servicio() {
 	}
@@ -27,7 +27,7 @@ public class Servicio implements java.io.Serializable {
 		this.idservicio = idservicio;
 	}
 
-	public Servicio(int idservicio, String nombre, String costo) {
+	public Servicio(int idservicio, String nombre, double costo) {
 		this.idservicio = idservicio;
 		this.nombre = nombre;
 		this.costo = costo;
@@ -54,11 +54,11 @@ public class Servicio implements java.io.Serializable {
 	}
 
 	@Column(name = "costo", length = 45)
-	public String getCosto() {
+	public double getCosto() {
 		return this.costo;
 	}
 
-	public void setCosto(String costo) {
+	public void setCosto(double costo) {
 		this.costo = costo;
 	}
 
